@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - nginx
+        #   db:
+        #image: mysql:5.7
+        #environment:
+        #MYSQL_DATABASE: laravel
+        #MYSQL_USER: user
+        #MYSQL_PASSWORD: password
+        #MYSQL_ROOT_PASSWORD: rootpassword
+        #ports:
+        #- "3306:3306"
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
