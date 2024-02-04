@@ -6,8 +6,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:80"
-    volumes:
-      - .:/var/www/html
+      - "443:443"
+    volumes: 
+      - ..:/var/www/html
     depends_on:
       - nginx
         #   db:
@@ -19,10 +20,9 @@ services:
         #MYSQL_ROOT_PASSWORD: rootpassword
         #ports:
         #- "3306:3306"
-
   nginx:
     image: nginx:alpine
     ports:
       - "80:80"
     volumes:
-      - .:/var/www/html
+      - ..:/var/www/html
