@@ -51,6 +51,13 @@ e. Push your code and solution to a public git repository and provide links.
 
 f. The screen below should display when visiting http://localhost:8000
 
+g. Include a webserver and self-signed certificate.
+
+h. Create a docker-compose file to define and run the images.
+
+i. Make your images as small and flexible as possible and follow best practices 
+to support dev and prod builds.
+
 
 
 
