@@ -97,7 +97,7 @@ Create project and required files
 
 ```composer create-project laravel/laravel laravel-docker```
 
-Create Dockerfile:
+Dockerfile:
 
 ```
 # Use PHP with Alpine
@@ -129,6 +129,39 @@ EXPOSE 8000 443
 
 # Use the entrypoint script to set permissions and start services
 ENTRYPOINT ["/entrypoint.sh"]
+```
+
+docker-compose.yaml
+
+```
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+      - "443:443"
+    volumes: 
+      - ..:/var/www/html
+    depends_on:
+      - nginx
+        #   db:
+        #image: mysql:5.7
+        #environment:
+        #MYSQL_DATABASE: laravel
+        #MYSQL_USER: user
+        #MYSQL_PASSWORD: password
+        #MYSQL_ROOT_PASSWORD: rootpassword
+        #ports:
+        #- "3306:3306"
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ..:/var/www/html
 ```
 
 
