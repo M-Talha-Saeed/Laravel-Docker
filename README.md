@@ -205,6 +205,17 @@ http{
 }
 ```
 
+## Build and Run
+
+Build example:
+
+``` docker compose up -d ```
+
+Verify containers are running
+
+``` docker ps ```
+
+
 
 
 
