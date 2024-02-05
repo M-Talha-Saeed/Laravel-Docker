@@ -38,12 +38,12 @@ Learning Curve: Creating and managing Docker images may have a learning curve, e
 Maintenance: Custom Docker images require maintenance for security updates and changes in configurations. Users need to stay on top of updates and manage their Dockerfiles.
 
 ### 3 & 4)
-a. Create a new Laravel project.
-i. Hint: composer create-project laravel/laravel example-app
-b. Create a Dockerfile.
-c. Use Alpine Linux.
-d. Provide example build and run commands.
-e. Push your code and solution to a public git repository and provide links.
+a. Create a new Laravel project. 
+i. Hint: composer create-project laravel/laravel example-app 
+b. Create a Dockerfile. 
+c. Use Alpine Linux. 
+d. Provide example build and run commands. 
+e. Push your code and solution to a public git repository and provide links. 
 f. The screen below should display when visiting http://localhost:8000
 
 
