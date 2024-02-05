@@ -59,9 +59,8 @@ h. Create a docker-compose file to define and run the images.
 i. Make your images as small and flexible as possible and follow best practices 
 to support dev and prod builds.
 
-## Step 1:
 
-install all prerequisites:
+## Install all Pre-requisites:
 
 PHP: ```sudo apt-get install php8.1-xml```
 
@@ -91,11 +90,14 @@ Verify that Docker is installed correctly by running the following command:
 
 ```sudo docker --version```
 
-## Step 2:
 
-Create project and required files
+## Create project and required files
 
 ```composer create-project laravel/laravel laravel-docker```
+
+Generate self-signed cert using openssl:
+
+```openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./selfsigned.key -out ./selfsigned.crt```
 
 Dockerfile:
 
@@ -202,7 +204,6 @@ http{
 }
 }
 ```
-
 
 
 
