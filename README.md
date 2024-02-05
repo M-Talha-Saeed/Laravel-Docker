@@ -229,7 +229,7 @@ Steps:
 
 #### Amazon Elastic Container Service (ECS):
 
-Why: ECS is a fully managed container orchestration service that allows you to run and scale Docker containers.
+Why: ECS is a fully managed container orchestration service that allows the user to run and scale Docker containers.
 
 Steps:
 
