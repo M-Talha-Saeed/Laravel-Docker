@@ -41,6 +41,7 @@ Maintenance: Custom Docker images require maintenance for security updates and c
 a. Create a new Laravel project.
 
 i. Hint: composer create-project laravel/laravel example-app 
+
 b. Create a Dockerfile.
 
 c. Use Alpine Linux.
@@ -62,9 +63,14 @@ to support dev and prod builds.
 
 install all prerequisites:
 
-php: ```sudo apt-get install php8.1-xml```
-composer: ```curl -sS https://getcomposer.org/installer | php```
-docker: 
+PHP: ```sudo apt-get install php8.1-xml```
+
+
+Composer: ```curl -sS https://getcomposer.org/installer | php```
+
+
+Docker:
+
 Install packages to allow apt to use a repository over HTTPS:
 
 ```sudo apt install -y apt-transport-https ca-certificates curl software-properties-common```
