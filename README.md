@@ -216,7 +216,80 @@ Verify containers are running
 ``` docker ps ```
 
 
+### 5) Briefly explain how you would deploy these images to an environment in AWS. Include the AWS Services you would leverage and why
 
+Amazon Elastic Container Registry (ECR):
+Why: ECR is a fully managed Docker container registry that makes it easy to store, manage, and deploy Docker container images.
+
+Steps:
+
+Push the Docker image to ECR using the docker push command.
+
+Amazon Elastic Container Service (ECS):
+Why: ECS is a fully managed container orchestration service that allows you to run and scale Docker containers.
+
+Steps:
+
+Create an ECS cluster.
+
+Define an ECS task definition that specifies the Docker image, resource requirements, and other settings.
+
+Create an ECS service that uses the task definition and manages the deployment and scaling of the containers.
+
+Amazon Elastic Container Service for Kubernetes (EKS):
+Why: EKS is a fully managed Kubernetes service, providing the flexibility of Kubernetes with the reliability and scalability of AWS.
+
+Steps:
+
+Create an EKS cluster.
+
+Deploy the Kubernetes manifests (deployment, service, etc.) specifying the Docker image.
+
+
+Amazon RDS (Relational Database Service):
+Why: If the Laravel application requires a database, I would use RDS to set up a managed database service.
+
+Steps:
+
+Create an RDS instance and configure it with the database settings.
+
+Update the Laravel application's database configuration to point to the RDS instance.
+
+
+Amazon Route 53:
+
+Why: Use Route 53 to manage the domain and set up DNS.
+
+Steps:
+
+Configure Route 53 to route traffic to the ECS or EKS service.
+
+
+AWS Identity and Access Management (IAM):
+
+Why: Set up IAM roles and permissions to secure access to AWS resources.
+
+Steps:
+
+Create IAM roles with the necessary permissions for the ECS or EKS tasks and services.
+
+
+Amazon CloudWatch:
+
+Why: Monitor the containers and infrastructure with CloudWatch.
+
+Steps:
+
+Set up CloudWatch Alarms to receive notifications on critical events.
+
+Configure logging to CloudWatch for application and container logs.
+
+Amazon Elastic Load Balancer (ELB):
+Why: If the application requires load balancing, I would use an ELB to distribute incoming traffic across multiple ECS instances.
+
+Steps:
+
+Create an Application Load Balancer and configure it to target the ECS instances.
 
 
 
