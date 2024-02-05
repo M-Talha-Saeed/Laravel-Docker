@@ -269,7 +269,7 @@ Steps:
 - Create IAM roles with the necessary permissions for the ECS or EKS tasks and services.
 
 
-Amazon CloudWatch:
+#### Amazon CloudWatch:
 
 Why: Monitor the containers and infrastructure with CloudWatch.
 
